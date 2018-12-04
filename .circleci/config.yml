@@ -1,8 +1,4 @@
 version: 2
 jobs:
-  build:
-    docker:
-      - image: circleci/ruby:2.4.1
-    steps:
-      - checkout
-      - run: echo "A first hello"
+  build:  # required for runs that don't use workflows
+    working_directory: ~/circleci-demo-python-django
